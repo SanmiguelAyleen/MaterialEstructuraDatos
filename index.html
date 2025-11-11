@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Estructura de Datos - ESPOCH</title>
+  <style>
+    body {
+      font-family: "Segoe UI", sans-serif;
+      margin: 0;
+      background-color: #f4f6f8;
+      color: #333;
+    }
+
+    header {
+      background-color: #004080;
+      color: white;
+      padding: 15px 30px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #0066cc;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 25px;
+      display: block;
+      transition: background 0.3s;
+    }
+
+    nav a:hover {
+      background-color: #0052a3;
+    }
+
+    section {
+      display: none;
+      padding: 20px 40px;
+      animation: fadeIn 0.4s ease;
+    }
+
+    section.active {
+      display: block;
+      background: white;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+      color: #004080;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    footer {
+      text-align: center;
+      padding: 10px;
+      background-color: #004080;
+      color: white;
+      margin-top: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Asignatura: Estructura de Datos</h1>
+    <p>Facultad de Informática y Electrónica - ESPOCH</p>
+  </header>
+
+  <nav>
+    <a href="#" onclick="mostrarUnidad(1)">Unidad 1</a>
+    <a href="#" onclick="mostrarUnidad(2)">Unidad 2</a>
+    <a href="#" onclick="mostrarUnidad(3)">Unidad 3</a>
+    <a href="#" onclick="mostrarUnidad(4)">Unidad 4</a>
+  </nav>
+
+  <main>
+    <section id="unidad1" class="active">
+      <h2>Unidad 1: Fundamentos e Introducción a las Estructuras de Datos</h2>
+      <ul>
+        <li>Introducción: historia, características, ventajas y desventajas.</li>
+        <li>Tipos de datos: primitivos, compuestos, agregados y abstractos.</li>
+        <li>Datos compuestos: vectores, matrices y registros.</li>
+        <li>Fundamentos de algoritmia y representación.</li>
+      </ul>
+    </section>
+
+    <section id="unidad2">
+      <h2>Unidad 2: Estructuras de Datos Lineales</h2>
+      <ul>
+        <li>Pilas (Stack): concepto, operaciones y aplicaciones.</li>
+        <li>Colas (Queue): tipos, operaciones y aplicaciones.</li>
+        <li>Listas (List): nodos, tipos y operaciones básicas.</li>
+      </ul>
+    </section>
+
+    <section id="unidad3">
+      <h2>Unidad 3: Estructuras de Datos No Lineales</h2>
+      <ul>
+        <li>Visualización de algoritmos y uso de herramientas.</li>
+        <li>Árboles: definición, representación y recorridos.</li>
+        <li>Grafos: definición, tipos y propiedades.</li>
+      </ul>
+    </section>
+
+    <section id="unidad4">
+      <h2>Unidad 4: Búsqueda y Ordenamiento</h2>
+      <ul>
+        <li>Análisis de algoritmos: complejidad temporal y espacial (Big O).</li>
+        <li>Métodos de ordenamiento: burbuja, quicksort, mergesort.</li>
+        <li>Métodos de búsqueda: secuencial, binaria y hash.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 - Escuela Superior Politécnica de Chimborazo | Profesor: Pedro Stalyn Aguilar Encarnación</p>
+  </footer>
+
+  <script>
+    function mostrarUnidad(num) {
+      const secciones = document.querySelectorAll("section");
+      secciones.forEach(sec => sec.classList.remove("active"));
+      document.getElementById("unidad" + num).classList.add("active");
+    }
+  </script>
+
+</body>
+</html>
